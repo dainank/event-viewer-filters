@@ -1,0 +1,22 @@
+<!-- This filter is a copy of the default Administrative Events filter under Custom Views, 
+     but with all of the DCOM warnings surpressed. This should reduce polution and make it easier to read. -->
+
+<QueryList>
+    <Query Id="0" Path="Application">
+        <Select Path="Application">
+            *[System[(Level=1 or Level=2 or Level=3)]]
+        </Select>
+        <Select Path="System">
+            *[System[(Level=1 or Level=2 or Level=3)]]
+        </Select>
+        <Select Path="Setup">
+            *[System[(Level=1 or Level=2 or Level=3)]]
+        </Select>
+        <Select Path="ForwardedEvents">
+            *[System[(Level=1 or Level=2 or Level=3)]]
+        </Select>
+        <Suppress Path="System">
+            *[System[Provider[@Name='Microsoft-Windows-DistributedCOM'] and (EventID=10016)]]
+        </Suppress>
+    </Query>
+</QueryList>
