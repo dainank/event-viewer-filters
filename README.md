@@ -14,3 +14,6 @@ A collection of useful filters to import and use in Windows 11's Event Viewer pr
 7. Finalize by clicking **OK** in the bottom-right of the **Create Custom View** window.
 
 You should now see your new Custom View. Feel free to add further filters or tweak existing ones.
+
+## Contributing
+If you have your own useful filters, feel free to add them to this repository via opening up a pull request.
